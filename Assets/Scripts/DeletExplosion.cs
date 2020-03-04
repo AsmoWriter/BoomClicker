@@ -7,6 +7,7 @@ public class DeletExplosion : MonoBehaviour
     [SerializeField]
     float IntervalToDelet;
 
+
     private void FixedUpdate()
     {
         IntervalToDelet -= Time.fixedDeltaTime;
