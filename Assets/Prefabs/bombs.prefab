@@ -146,6 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1faa643249f4af1409fae85bd4b6ea56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrowToBoom: 7
+  _HpDamage: 10
+  _scoreCounter: {fileID: 11400000, guid: 6905c3ec13d566a4fa7a23aad60cad09, type: 2}
+  _GrowToBoom: 7
   ExplosionPrefab: {fileID: 2339374622012871285, guid: f9003aeaec879d44a97dbeca7225aa83,
     type: 3}

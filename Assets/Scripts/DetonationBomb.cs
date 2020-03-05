@@ -5,15 +5,21 @@ using UnityEngine;
 public class DetonationBomb : MonoBehaviour
 {
     [SerializeField]
-    float GrowToBoom;
+    private int _HpDamage = 10;
     [SerializeField]
-    GameObject ExplosionPrefab;
+    private HpCountScriptableObject _scoreCounter;
+    [SerializeField]
+    float _GrowToBoom = 7;
+    [SerializeField]
+    public GameObject ExplosionPrefab;
+
     private void FixedUpdate()
     {
-        if (transform.localScale.x > GrowToBoom)
+        if (transform.localScale.x > _GrowToBoom)
         {
             Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
+            _scoreCounter.AddValue(_HpDamage);
         }
         
 
