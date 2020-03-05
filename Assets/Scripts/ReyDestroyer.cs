@@ -1,9 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System.Linq;
 
 public class ReyDestroyer : MonoBehaviour
 {
+    [SerializeField]
+    private int _addScore = 1;
+    [SerializeField]
+    private CounterScriptableObject _scoreCounter;
+
     private bool _keyPressed;
     private string _destroyTag = "BombTag";
 
@@ -22,6 +29,7 @@ public class ReyDestroyer : MonoBehaviour
             if (_hit.transform.tag == _destroyTag)
             {
                 Destroy(_hit.transform.gameObject);
+                _scoreCounter.AddValue(_addScore);
             }
         }
     }
