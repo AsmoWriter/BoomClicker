@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HpCounterUpdateView : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class HpCounterUpdateView : MonoBehaviour
 
     private void UpdateCounter(int count)
     {
+        if (count <= 0)
+        {
+            SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
+        }
         _countText.text = "HP: "+count.ToString()+"%";
     }
 }
