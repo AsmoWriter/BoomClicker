@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DeletExplosion : MonoBehaviour
+public class DeletAnimation : MonoBehaviour
 {
     [SerializeField]
     float IntervalToDelet;

@@ -318,6 +318,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _addScore: 1
   _scoreCounter: {fileID: 11400000, guid: 01b1f8d804798bd4a95e23c6d34f4fbf, type: 2}
+  PlusScorePrefab: {fileID: 7792013320683933017, guid: 87293feea1fd57d4f9e8048151482529,
+    type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
