@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class HpCounterUpdateView : MonoBehaviour
+public class HPCounterUpdateView : MonoBehaviour
 {
     [SerializeField]
     private Text _countText;
     [SerializeField]
-    private HpCountScriptableObject _counterScriptableObject;
+    private HPCounterScriptableObject _counterScriptableObject;
     [SerializeField]
-    private GameObject GameOver;
+    private GameObject GameOverCanvas;
 
     private void Awake()
     {
-        _counterScriptableObject.UpdateHealth += UpdateCounter;
+        _counterScriptableObject.UpdateHP += UpdateCounter;
     }
 
     private void OnEnable()
@@ -22,10 +22,13 @@ public class HpCounterUpdateView : MonoBehaviour
 
     private void UpdateCounter(int count)
     {
-        if (count <= 0)
+        _countText.text = count.ToString();
+    }
+    private void FixedUpdate()
+    {
+        if (_counterScriptableObject.Count <= 0)
         {
-            GameOver.SetActive(true);
+            GameOverCanvas.SetActive(true);
         }
-        _countText.text = "HP: "+count.ToString()+"%";
     }
 }

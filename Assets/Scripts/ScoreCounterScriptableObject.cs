@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
-public class CounterScriptableObject : ScriptableObject
+public class ScoreCounterScriptableObject : ScriptableObject
 {
-
     [SerializeField]
     private int _count = 0;
 
@@ -13,8 +16,7 @@ public class CounterScriptableObject : ScriptableObject
     private bool _resetOnNewGame = true;
 
     public event Action<int> UpdateScore;
-
-    private void OnEnable()
+    public void OnEnable()
     {
         if (_resetOnNewGame)
         {
@@ -29,11 +31,11 @@ public class CounterScriptableObject : ScriptableObject
     }
 
 #if UNITY_EDITOR
-    [MenuItem("Assets/Create/CounterScriptableObject")]
+    [MenuItem("Assets/Create/ScoreCounterScriptableObject")]
     public static void CreateMyAsset()
     {
-        CounterScriptableObject asset = CreateInstance<CounterScriptableObject>();
-        AssetDatabase.CreateAsset(asset, "Assets/Counters/NewCounterScriptableObject.asset");
+        ScoreCounterScriptableObject asset = CreateInstance<ScoreCounterScriptableObject>();
+        AssetDatabase.CreateAsset(asset, "Assets/Counters/NewScoreCounterScriptableObject.asset");
         AssetDatabase.SaveAssets();
         EditorUtility.FocusProjectWindow();
         Selection.activeObject = asset;

@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 
-public class ScaleHPBar : MonoBehaviour
+public class ScaleHpBar : MonoBehaviour
 {
     [SerializeField]
-    private HpCountScriptableObject _counterScriptableObject;
+    private HPCounterScriptableObject _counterScriptableObject;
 
     private float MaxHP = 100;
 
     private void Awake()
     {
-        _counterScriptableObject.UpdateHealth += UpdateCounter;
+        _counterScriptableObject.UpdateHP += UpdateCounter;
     }
 
     private void OnEnable()

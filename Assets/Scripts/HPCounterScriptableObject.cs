@@ -1,8 +1,13 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Serialization;
 
-public class HpCountScriptableObject : ScriptableObject
+
+public class HPCounterScriptableObject : ScriptableObject
 {
     [SerializeField]
     private int _count = 100;
@@ -11,7 +16,7 @@ public class HpCountScriptableObject : ScriptableObject
     [SerializeField]
     private bool _resetOnNewGame = true;
 
-    public event Action<int> UpdateHealth;
+    public event Action<int> UpdateHP;
     public void OnEnable()
     {
         if (_resetOnNewGame)
@@ -23,14 +28,14 @@ public class HpCountScriptableObject : ScriptableObject
     public void AddValue(int count)
     {
         _count -= count;
-        UpdateHealth?.Invoke(_count);
+        UpdateHP?.Invoke(_count);
     }
 
 #if UNITY_EDITOR
     [MenuItem("Assets/Create/HPCounterScriptableObject")]
     public static void CreateMyAsset()
     {
-        HpCountScriptableObject asset = CreateInstance<HpCountScriptableObject>();
+        HPCounterScriptableObject asset = CreateInstance<HPCounterScriptableObject>();
         AssetDatabase.CreateAsset(asset, "Assets/Counters/NewHPCounterScriptableObject.asset");
         AssetDatabase.SaveAssets();
         EditorUtility.FocusProjectWindow();

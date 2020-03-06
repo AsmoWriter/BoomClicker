@@ -1,15 +1,12 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-
-
-// Не скопипастил, а "сделал под влиянием")
-public class CounterUpdateView : MonoBehaviour
+public class ScoreCounterUpdateView : MonoBehaviour
 {
     [SerializeField]
     private Text _countText;
     [SerializeField]
-    private CounterScriptableObject _counterScriptableObject;
+    private ScoreCounterScriptableObject _counterScriptableObject;
 
     private void Awake()
     {
