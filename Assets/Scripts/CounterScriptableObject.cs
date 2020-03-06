@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.Serialization;
 
 public class CounterScriptableObject : ScriptableObject
 {
+
     [SerializeField]
     private int _count = 0;
 
@@ -16,7 +13,8 @@ public class CounterScriptableObject : ScriptableObject
     private bool _resetOnNewGame = true;
 
     public event Action<int> UpdateScore;
-    public void OnEnable()
+
+    private void OnEnable()
     {
         if (_resetOnNewGame)
         {

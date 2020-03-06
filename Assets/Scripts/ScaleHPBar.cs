@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScaleHPBar : MonoBehaviour
 {
@@ -20,6 +18,6 @@ public class ScaleHPBar : MonoBehaviour
     }
     private void UpdateCounter(int count)
     {
-        transform.localScale = new Vector3(count/MaxHP, 1, 1);
+        transform.localScale = new Vector3(count / MaxHP, 1, 1);
     }
 }

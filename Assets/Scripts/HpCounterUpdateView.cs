@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class HpCounterUpdateView : MonoBehaviour
 {
@@ -8,6 +7,8 @@ public class HpCounterUpdateView : MonoBehaviour
     private Text _countText;
     [SerializeField]
     private HpCountScriptableObject _counterScriptableObject;
+    [SerializeField]
+    private GameObject GameOver;
 
     private void Awake()
     {
@@ -23,7 +24,7 @@ public class HpCounterUpdateView : MonoBehaviour
     {
         if (count <= 0)
         {
-            SceneManager.LoadScene("GameOverScene", LoadSceneMode.Single);
+            GameOver.SetActive(true);
         }
         _countText.text = "HP: "+count.ToString()+"%";
     }
