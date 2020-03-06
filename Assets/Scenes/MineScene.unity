@@ -302,7 +302,6 @@ GameObject:
   - component: {fileID: 251633442}
   - component: {fileID: 251633444}
   - component: {fileID: 251633443}
-  - component: {fileID: 251633445}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -366,22 +365,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251633441}
   m_CullTransparentMesh: 0
---- !u!114 &251633445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251633441}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1faa643249f4af1409fae85bd4b6ea56, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _GrowToBoom: 7
-  ExplosionPrefab: {fileID: 0}
-  HP: {fileID: 0}
-  Damage: 0
 --- !u!1 &360249210
 GameObject:
   m_ObjectHideFlags: 0
