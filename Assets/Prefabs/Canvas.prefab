@@ -611,7 +611,7 @@ GameObject:
   - component: {fileID: 5050862650317166913}
   - component: {fileID: 5050862650317166918}
   - component: {fileID: 5050862650317166919}
-  - component: {fileID: 5050862650317166912}
+  - component: {fileID: 2190073127438700045}
   m_Layer: 5
   m_Name: ScoreCount
   m_TagString: Untagged
@@ -678,7 +678,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 0
---- !u!114 &5050862650317166912
+--- !u!114 &2190073127438700045
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
