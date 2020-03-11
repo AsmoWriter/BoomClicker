@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4617222830261767031}
   - component: {fileID: 4617222830261767024}
-  - component: {fileID: 4617222830261767030}
   m_Layer: 0
   m_Name: DotOfSpawn
   m_TagString: Untagged
@@ -44,17 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d8714e3bccd32b4887c44d7e0b2aaf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Prefab: {fileID: 9120354576302170841, guid: 5397c0ee8a2527141851fd81f5c73da2, type: 3}
-  Interval: 1
---- !u!114 &4617222830261767030
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4617222830261767025}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 447d9f63eaba132459f2dc65c2314d78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _prefab: {fileID: 9120354576302170841, guid: 5397c0ee8a2527141851fd81f5c73da2, type: 3}
+  _interval: 0.6

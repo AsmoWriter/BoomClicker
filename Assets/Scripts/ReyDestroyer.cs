@@ -5,7 +5,7 @@ public class ReyDestroyer : MonoBehaviour
     [SerializeField]
     private CounterScriptableObject _scoreCounter;
     [SerializeField]
-    private GameObject PlusScorePrefab;
+    private GameObject _plusScorePrefab;
 
     private bool _keyPressed;
     private string _destroyTag = "BombTag";
@@ -25,7 +25,7 @@ public class ReyDestroyer : MonoBehaviour
             if (_hit.transform.tag == _destroyTag)
             {
                 Destroy(_hit.transform.gameObject);
-                Instantiate(PlusScorePrefab, ray, Quaternion.identity);
+                Instantiate(_plusScorePrefab, ray, Quaternion.identity);
                 _scoreCounter.ChangeValue(1);
             }
         }

@@ -8,7 +8,7 @@ public class GameOverMenu : MonoBehaviour
     [SerializeField]
     private CounterScriptableObject _hpCounter;
     [SerializeField]
-    private GameObject UICanvas;
+    private GameObject _uiCanvas;
 
     public void OnRestartButtonClick()
     {
@@ -27,7 +27,7 @@ public class GameOverMenu : MonoBehaviour
         _scoreCounter.OnEnable();
         _scoreCounter.ChangeValue(0);
         gameObject.SetActive(false);
-        UICanvas.SetActive(false);
+        _uiCanvas.SetActive(false);
         _hpCounter.OnEnable();
         _hpCounter.ChangeValue(0);
     }

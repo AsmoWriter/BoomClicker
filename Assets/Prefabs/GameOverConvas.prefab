@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 702787279489804021}
   - component: {fileID: 702787279489804020}
   - component: {fileID: 702787279489804024}
+  - component: {fileID: 4689973807132484558}
   m_Layer: 5
   m_Name: GameOverConvas
   m_TagString: Untagged
@@ -246,8 +247,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreCounter: {fileID: 11400000, guid: 70de5f80e032f1b49838d0110fc34e5d, type: 2}
   _hpCounter: {fileID: 11400000, guid: 767d79a2c0b0d3e4ea0e6f2ca42ca638, type: 2}
-  UICanvas: {fileID: 6836728901208786125, guid: 5d1fc523d871b7a4fb16b23fa7d25c79,
-    type: 3}
+  _uiCanvas: {fileID: 0}
+--- !u!114 &4689973807132484558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702787279489804019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18339eef264b92d4dbd710f128fae107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &702787279514831183
 GameObject:
   m_ObjectHideFlags: 0

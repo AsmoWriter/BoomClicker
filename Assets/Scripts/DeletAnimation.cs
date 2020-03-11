@@ -3,14 +3,14 @@
 public class DeletAnimation : MonoBehaviour
 {
     [SerializeField]
-    float IntervalToDelet;
+    private float _intervalToDelet;
 
 
     private void FixedUpdate()
     {
-        IntervalToDelet -= Time.fixedDeltaTime;
+        _intervalToDelet -= Time.fixedDeltaTime;
 
-        if (IntervalToDelet <= 0)
+        if (_intervalToDelet <= 0)
         {
             Destroy(gameObject);
         }

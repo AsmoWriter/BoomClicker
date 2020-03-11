@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreCounter: {fileID: 11400000, guid: 70de5f80e032f1b49838d0110fc34e5d, type: 2}
-  PlusScorePrefab: {fileID: 7792013320683933017, guid: 87293feea1fd57d4f9e8048151482529,
+  _plusScorePrefab: {fileID: 7792013320683933017, guid: 87293feea1fd57d4f9e8048151482529,
     type: 3}
 --- !u!20 &519420031
 Camera:
@@ -716,6 +716,17 @@ PrefabInstance:
         type: 3}
       propertyPath: Interval
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617222830261767024, guid: ffe0e6700145f4b448c85e6a7aba9c95,
+        type: 3}
+      propertyPath: _prefab
+      value: 
+      objectReference: {fileID: 9120354576302170841, guid: 5397c0ee8a2527141851fd81f5c73da2,
+        type: 3}
+    - target: {fileID: 4617222830261767024, guid: ffe0e6700145f4b448c85e6a7aba9c95,
+        type: 3}
+      propertyPath: _interval
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 4617222830261767025, guid: ffe0e6700145f4b448c85e6a7aba9c95,
         type: 3}

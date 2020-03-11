@@ -2,13 +2,13 @@
 
 public class BombGrow : MonoBehaviour
 {
-    private Vector3 GrowSize = new Vector3(1, 1, 1);
+    private Vector3 _growSize = new Vector3(1, 1, 1);
 
     [SerializeField]
-    float GrowSpeed;
+    private float _growSpeed;
 
     private void FixedUpdate()
     {
-        transform.localScale += GrowSize * Time.deltaTime * GrowSpeed;
+        transform.localScale += _growSize * Time.deltaTime * _growSpeed;
     }
 }

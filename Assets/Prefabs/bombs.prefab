@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7f832b4692338a4485e98bcb2b64f23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GrowSpeed: 3
+  _growSpeed: 3
 --- !u!114 &2583900462569218207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1faa643249f4af1409fae85bd4b6ea56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _GrowToBoom: 7
+  _growToBoom: 7
+  _hp: {fileID: 11400000, guid: 767d79a2c0b0d3e4ea0e6f2ca42ca638, type: 2}
+  _damage: 10
   ExplosionPrefab: {fileID: 2339374622012871285, guid: f9003aeaec879d44a97dbeca7225aa83,
     type: 3}
-  HP: {fileID: 11400000, guid: 767d79a2c0b0d3e4ea0e6f2ca42ca638, type: 2}
-  Damage: 10
