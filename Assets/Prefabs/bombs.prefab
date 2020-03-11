@@ -149,5 +149,5 @@ MonoBehaviour:
   _GrowToBoom: 7
   ExplosionPrefab: {fileID: 2339374622012871285, guid: f9003aeaec879d44a97dbeca7225aa83,
     type: 3}
-  HP: {fileID: 11400000, guid: bcd6d123b481c8d448cd4ebb7fa727cc, type: 2}
+  HP: {fileID: 11400000, guid: 767d79a2c0b0d3e4ea0e6f2ca42ca638, type: 2}
   Damage: 10

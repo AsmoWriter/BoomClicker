@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreCounterUpdateView : MonoBehaviour
+public class CounterUpdateView : MonoBehaviour
 {
     [SerializeField]
     private Text _countText;
     [SerializeField]
-    private ScoreCounterScriptableObject _counterScriptableObject;
+    private CounterScriptableObject _counterScriptableObject;
 
     private void Awake()
     {
-        _counterScriptableObject.UpdateScore += UpdateCounter;
+        _counterScriptableObject.UpdateValue += UpdateCounter;
     }
 
     private void OnEnable()

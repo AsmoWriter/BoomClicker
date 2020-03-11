@@ -9,7 +9,7 @@ public class DetonationBomb : MonoBehaviour
     [SerializeField]
     public GameObject ExplosionPrefab;
     [SerializeField]
-    private HPCounterScriptableObject HP;
+    private CounterScriptableObject HP;
     [SerializeField]
     private int Damage;
 
@@ -18,7 +18,7 @@ public class DetonationBomb : MonoBehaviour
         if (transform.localScale.x > _GrowToBoom)
         {
             Instantiate(ExplosionPrefab, transform.position, Quaternion.identity);
-            HP.AddValue(Damage);
+            HP.ChangeValue(-Damage);
             Destroy(gameObject);
         }
     }

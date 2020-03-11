@@ -3,21 +3,25 @@
 public class ScaleHpBar : MonoBehaviour
 {
     [SerializeField]
-    private HPCounterScriptableObject _counterScriptableObject;
+    private CounterScriptableObject _hpCounterScriptableObject;
 
     private float MaxHP = 100;
 
     private void Awake()
     {
-        _counterScriptableObject.UpdateHP += UpdateCounter;
+        _hpCounterScriptableObject.UpdateValue += UpdateCounter;
     }
 
     private void OnEnable()
     {
-        UpdateCounter(_counterScriptableObject.Count);
+        UpdateCounter(_hpCounterScriptableObject.Count);
     }
     private void UpdateCounter(int count)
     {
         transform.localScale = new Vector3(count / MaxHP, 1, 1);
+        if (count <= 0)
+        {
+            _hpCounterScriptableObject.UpdateValue -= UpdateCounter;
+        }
     }
 }

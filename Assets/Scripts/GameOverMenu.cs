@@ -4,9 +4,9 @@ using UnityEngine.SceneManagement;
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField]
-    private ScoreCounterScriptableObject Scores;
+    private CounterScriptableObject _scoreCounter;
     [SerializeField]
-    private HPCounterScriptableObject HP;
+    private CounterScriptableObject _hpCounter;
     [SerializeField]
     private GameObject UICanvas;
 
@@ -24,12 +24,12 @@ public class GameOverMenu : MonoBehaviour
     }
     public void UpdateUIOnNewGame()
     {
-        Scores.OnEnable();
-        Scores.AddValue(0);
+        _scoreCounter.OnEnable();
+        _scoreCounter.ChangeValue(0);
         gameObject.SetActive(false);
         UICanvas.SetActive(false);
-        HP.OnEnable();
-        HP.AddValue(0);
+        _hpCounter.OnEnable();
+        _hpCounter.ChangeValue(0);
     }
 
 }

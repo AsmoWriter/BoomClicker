@@ -3,7 +3,7 @@
 public class ReyDestroyer : MonoBehaviour
 {
     [SerializeField]
-    private ScoreCounterScriptableObject Counter;
+    private CounterScriptableObject _scoreCounter;
     [SerializeField]
     private GameObject PlusScorePrefab;
 
@@ -26,7 +26,7 @@ public class ReyDestroyer : MonoBehaviour
             {
                 Destroy(_hit.transform.gameObject);
                 Instantiate(PlusScorePrefab, ray, Quaternion.identity);
-                Counter.AddValue(1);
+                _scoreCounter.ChangeValue(1);
             }
         }
     }
