@@ -143,6 +143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7257849041762210853, guid: 5d1fc523d871b7a4fb16b23fa7d25c79,
+        type: 3}
+      propertyPath: _gameOverConvas
+      value: 
+      objectReference: {fileID: 201595890}
     - target: {fileID: 7557350246918220638, guid: 5d1fc523d871b7a4fb16b23fa7d25c79,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -256,50 +261,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 589558930}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &201595896
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201595890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18339eef264b92d4dbd710f128fae107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &303361555 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6836728901208786125, guid: 5d1fc523d871b7a4fb16b23fa7d25c79,
     type: 3}
   m_PrefabInstance: {fileID: 24459648}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &303361560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303361555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014dbe1010ea240409d67f4a6dd28257, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _hpCounter: {fileID: 11400000, guid: 767d79a2c0b0d3e4ea0e6f2ca42ca638, type: 2}
-  _gameOverConvas: {fileID: 201595890}
---- !u!114 &303361561
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303361555}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18339eef264b92d4dbd710f128fae107, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &443063693
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,6 +663,11 @@ PrefabInstance:
     - target: {fileID: 702787279489804024, guid: aa941a69c3946e5468e913d76a2fe8e1,
         type: 3}
       propertyPath: UICanvas
+      value: 
+      objectReference: {fileID: 303361555}
+    - target: {fileID: 702787279489804024, guid: aa941a69c3946e5468e913d76a2fe8e1,
+        type: 3}
+      propertyPath: _uiCanvas
       value: 
       objectReference: {fileID: 303361555}
     - target: {fileID: 702787279514831280, guid: aa941a69c3946e5468e913d76a2fe8e1,
