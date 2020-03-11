@@ -967,7 +967,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4617222830261767030, guid: ffe0e6700145f4b448c85e6a7aba9c95, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ffe0e6700145f4b448c85e6a7aba9c95, type: 3}
 --- !u!1 &1867918008 stripped
 GameObject:
@@ -1328,6 +1329,12 @@ PrefabInstance:
       propertyPath: GameOverCanvas
       value: 
       objectReference: {fileID: 2020655811}
+    - target: {fileID: 5050862649068862736, guid: 5d1fc523d871b7a4fb16b23fa7d25c79,
+        type: 3}
+      propertyPath: _counterScriptableObject
+      value: 
+      objectReference: {fileID: 11400000, guid: bcd6d123b481c8d448cd4ebb7fa727cc,
+        type: 2}
     - target: {fileID: 5050862650126390888, guid: 5d1fc523d871b7a4fb16b23fa7d25c79,
         type: 3}
       propertyPath: m_Camera

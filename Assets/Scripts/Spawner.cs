@@ -3,10 +3,16 @@
 public class Spawner : MonoBehaviour
 {
     [SerializeField]
-    GameObject Prefab;
+    private GameObject Prefab;
 
     [SerializeField]
-    float Interval;
+    private float Interval;
+
+    private float FromX = -16 / 2;
+    private float ToX = 16 / 2;
+
+    private float FromY = -10 / 2;
+    private float ToY = 10 / 2;
 
     private float _timer;
 
@@ -18,6 +24,6 @@ public class Spawner : MonoBehaviour
             return;
 
         _timer += Interval;
-        Instantiate(Prefab, transform.position, Quaternion.identity);
+        Instantiate(Prefab, new Vector3(Random.Range(FromX, ToX), Random.Range(FromY, ToY), 1), Quaternion.identity);
     }
 }
