@@ -10,6 +10,8 @@ public class CounterScriptableObject : ScriptableObject
     [SerializeField]
     private int _baseCount;
 
+    public int PriorCount;
+
     public int Count => _count;
 
     [SerializeField]
@@ -18,16 +20,23 @@ public class CounterScriptableObject : ScriptableObject
     public event Action<int> UpdateValue;
     public void OnEnable()
     {
-        if (_resetOnNewGame)
-        {
-            _count = _baseCount;
-        }
+        ResetValue();
     }
 
     public void ChangeValue(int count)
     {
         _count += count;
         UpdateValue?.Invoke(_count);
+    }
+
+    public void ResetValue()
+    {
+        if (_resetOnNewGame)
+        {
+            PriorCount = _count;
+            _count = _baseCount;
+            UpdateValue?.Invoke(_count);
+        }
     }
 
 #if UNITY_EDITOR

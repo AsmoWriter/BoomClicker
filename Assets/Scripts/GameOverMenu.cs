@@ -1,35 +1,62 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameOverMenu : MonoBehaviour
 {
     [SerializeField]
-    private CounterScriptableObject _scoreCounter;
+    private GameObject _hpContol;
     [SerializeField]
-    private CounterScriptableObject _hpCounter;
+    private GameObject _timeContol;
     [SerializeField]
-    private GameObject _uiCanvas;
+    private GameObject _menuWindow;
+    [SerializeField]
+    private GameObject _bombSpawner;
+    [SerializeField]
+    private GameObject _timerModeSpawner;
+    [SerializeField]
+    private GameObject _healthModeSpawner;
+
+    [SerializeField]
+    private GameObject _timerModeHUD;
+    [SerializeField]
+    private GameObject _healthModeHUD;
+
+    private string _modeName;
 
     public void OnRestartButtonClick()
     {
-        UpdateUIOnNewGame();
-
-        SceneManager.LoadScene("MineScene", LoadSceneMode.Single);
+        GetAciveModeName();
+        if (_modeName == "TimerMode")
+        {
+            gameObject.SetActive(false);
+            _timerModeHUD.SetActive(true);
+            _bombSpawner.SetActive(true);
+            _timerModeSpawner.SetActive(true);
+        }
+        else if (_modeName == "HealthMode")
+        {
+            gameObject.SetActive(false);
+            _healthModeHUD.SetActive(true);
+            _bombSpawner.SetActive(true);
+            _healthModeSpawner.SetActive(true);
+        }
     }
     public void OnMenuButtonClick()
     {
-        UpdateUIOnNewGame();
-
-        SceneManager.LoadScene("MenuScene", LoadSceneMode.Single);
-    }
-    public void UpdateUIOnNewGame()
-    {
-        _scoreCounter.OnEnable();
-        _scoreCounter.ChangeValue(0);
+        _hpContol.SetActive(false);
+        _timeContol.SetActive(false);
         gameObject.SetActive(false);
-        _uiCanvas.SetActive(false);
-        _hpCounter.OnEnable();
-        _hpCounter.ChangeValue(0);
+        _menuWindow.SetActive(true);
     }
 
+    public void GetAciveModeName()
+    {
+        if (_hpContol.activeSelf == true & _timeContol.activeSelf != true)
+        {
+            _modeName = "HealthMode";
+        }
+        else if (_hpContol.activeSelf != true & _timeContol.activeSelf == true)
+        {
+            _modeName = "TimerMode";
+        }
+    }
 }

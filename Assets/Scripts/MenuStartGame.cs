@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuStartGame : MonoBehaviour
 {
@@ -13,6 +12,10 @@ public class MenuStartGame : MonoBehaviour
     private GameObject _aboutGameWindow;
 
     [SerializeField]
+    private GameObject _timerModeControl;
+    [SerializeField]
+    private GameObject _healthModeControl;
+    [SerializeField]
     private GameObject _timerModeHUD;
     [SerializeField]
     private GameObject _healthModeHUD;
@@ -20,6 +23,7 @@ public class MenuStartGame : MonoBehaviour
 
     public void OnStarTimerModetButtonClick()
     {
+        _timerModeControl.SetActive(true);
         gameObject.SetActive(false);
         _timerModeHUD.SetActive(true);
         _bombSpawner.SetActive(true);
@@ -27,6 +31,7 @@ public class MenuStartGame : MonoBehaviour
     }
     public void OnStarHealthModetButtonClick()
     {
+        _healthModeControl.SetActive(true);
         gameObject.SetActive(false);
         _healthModeHUD.SetActive(true);
         _bombSpawner.SetActive(true);

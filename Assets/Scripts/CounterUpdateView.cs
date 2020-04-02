@@ -15,6 +15,7 @@ public class CounterUpdateView : MonoBehaviour
 
     private void OnEnable()
     {
+        _counterScriptableObject.ResetValue();
         UpdateCounter(_counterScriptableObject.Count);
     }
 

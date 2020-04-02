@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c38f678c71808fc4092af9cd6eb1757e, type: 3}
   m_Name: ScoreCounter
   m_EditorClassIdentifier: 
-  _count: 186
+  _count: 53
   _baseCount: 0
   _resetOnNewGame: 1

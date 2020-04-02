@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2930805666738535016}
   - component: {fileID: 2930805666738535017}
   - component: {fileID: 2930805666738535022}
+  - component: {fileID: 6307462180634572396}
   m_Layer: 0
   m_Name: TimerIcon
   m_TagString: TimerTag
@@ -118,3 +119,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6307462180634572396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2930805666738535023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fe427417768e740bde4b3be5e07d77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _intervalToDelet: 1.2

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class Spawner : MonoBehaviour
 {
@@ -7,22 +8,36 @@ public class Spawner : MonoBehaviour
     [SerializeField]
     private float _interval;
 
-    private float FromX = -16 / 2;
-    private float ToX = 16 / 2;
+    private float FromX = -14 / 2;
+    private float ToX = 14 / 2;
 
-    private float FromY = -10 / 2;
-    private float ToY = 10 / 2;
+    private float FromY = -8 / 2;
+    private float ToY = 8 / 2;
 
-    private float _timer;
+    private Coroutine _spawnRoutine;
 
-    private void FixedUpdate()
+    private void OnEnable()
     {
-        _timer -= Time.fixedDeltaTime;
+        _spawnRoutine = StartCoroutine(SpawnRoutine);
+    }
 
-        if (_timer > 0)
-            return;
+    private void OnDisable()
+    {
+        if (_spawnRoutine != null)
+            StopCoroutine(_spawnRoutine);
+        _spawnRoutine = null;
+    }
 
-        _timer += _interval;
-        Instantiate(_prefab, new Vector3(Random.Range(FromX, ToX), Random.Range(FromY, ToY), 1), Quaternion.identity);
+    private IEnumerator SpawnRoutine
+    {
+        get
+        {
+            yield return new WaitForSeconds(_interval);
+            while (true)
+            {
+                Instantiate(_prefab, new Vector3 (Random.Range(FromX, ToX), Random.Range(FromY, ToY), 1), Quaternion.identity);
+                yield return new WaitForSeconds(_interval);
+            }
+        }
     }
 }
